@@ -11,7 +11,11 @@ class SplashScreenBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        children: [SvgPicture.asset(logo)],
+        children: [
+          SvgPicture.asset(logo),
+          Text("Smart View"),
+          Text("Your go-to source for smartphones information"),
+        ],
       ),
     );
   }
