@@ -13,7 +13,10 @@ class SplashScreenBody extends StatelessWidget {
       body: Column(
         children: [
           SvgPicture.asset(logo),
-          Text("Smart View"),
+          Text(
+            "Smart View",
+            style: TextStyle(),
+          ),
           Text("Your go-to source for smartphones information"),
         ],
       ),

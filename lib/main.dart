@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smartviewapp/Core/colors.dart';
 import 'package:smartviewapp/Core/utils/routing.dart';
 
 void main() {
@@ -12,7 +13,11 @@ class SmartViewApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       routerConfig: Routing.routes,
-      theme: ThemeData.dark(),
+      theme: ThemeData(
+        fontFamily: "Lato",
+        brightness: Brightness.dark,
+        canvasColor: AppColors.mainColor,
+      ),
     );
   }
 }
