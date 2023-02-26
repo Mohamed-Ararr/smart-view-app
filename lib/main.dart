@@ -14,7 +14,7 @@ class SmartViewApp extends StatelessWidget {
     return MaterialApp.router(
       routerConfig: Routing.routes,
       theme: ThemeData(
-        fontFamily: "Lato",
+        fontFamily: "Montserrat",
         brightness: Brightness.dark,
         canvasColor: AppColors.mainColor,
       ),

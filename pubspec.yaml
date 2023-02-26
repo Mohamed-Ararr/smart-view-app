@@ -75,21 +75,12 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: Lato
+    - family: Montserrat
       fonts:
-        - asset: assets/font/Lato-Black.ttf
-          style: italic
-        - asset: assets/font/Lato-Bold.ttf
-        - asset: assets/font/Lato-BoldItalic.ttf
-          style: italic
-        - asset: assets/font/Lato-Italic.ttf
-          style: italic
-        - asset: assets/font/Lato-Light.ttf
-        - asset: assets/font/Lato-LightItalic.ttf
-          style: italic
-        - asset: assets/font/Lato-Regular.ttf
-        - asset: assets/font/Lato-Thin.ttf
-        - asset: assets/font/Lato-ThinItalic.ttf
+        - asset: assets/font/Montserrat-Bold.ttf
+        - asset: assets/font/Montserrat-Medium.ttf
+        - asset: assets/font/Montserrat-Regular.ttf
+        - asset: assets/font/Montserrat-Thin.ttf
 
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
