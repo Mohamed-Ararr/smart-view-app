@@ -7,4 +7,8 @@ class FontOpt {
     fontSize: 30,
     fontWeight: FontWeight.bold,
   );
+
+  static TextStyle regularText = const TextStyle(
+    fontSize: 17,
+  );
 }

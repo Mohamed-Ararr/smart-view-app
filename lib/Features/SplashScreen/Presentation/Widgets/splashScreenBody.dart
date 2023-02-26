@@ -2,8 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:smartviewapp/Core/fontOpt.dart';
+import 'package:smartviewapp/Features/SplashScreen/Presentation/Widgets/appTitle.dart';
 import 'package:smartviewapp/constants.dart';
+
+import 'appSlogan.dart';
 
 class SplashScreenBody extends StatelessWidget {
   const SplashScreenBody({super.key});
@@ -17,12 +19,9 @@ class SplashScreenBody extends StatelessWidget {
           children: [
             SvgPicture.asset(logo),
             const SizedBox(height: 20),
-            Text(
-              "Smart View",
-              style: FontOpt.titleHeadLine,
-            ),
+            const AppTitle(),
             const SizedBox(height: 20),
-            Text("Your go-to source for smartphones information"),
+            const AppSlogan(),
           ],
         ),
       ),
