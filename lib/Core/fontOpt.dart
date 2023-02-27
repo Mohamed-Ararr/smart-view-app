@@ -21,4 +21,31 @@ class FontOpt {
     fontSize: 15,
     fontWeight: FontWeight.w400,
   );
+
+  static TextStyle regularBlack = const TextStyle(
+    fontSize: 17,
+    color: Colors.black,
+  );
+
+  static TextStyle regularBoldWhite = const TextStyle(
+    fontSize: 17,
+    fontWeight: FontWeight.w600,
+    color: Colors.black,
+  );
+
+  static TextStyle specTitle = TextStyle(
+    fontWeight: FontWeight.w400,
+    color: Colors.white.withAlpha(127),
+  );
+
+  static TextStyle specValue = const TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
+    color: Colors.white,
+  );
+
+  static TextStyle phoneTitle = const TextStyle(
+    fontSize: 22,
+    fontWeight: FontWeight.w600,
+  );
 }
