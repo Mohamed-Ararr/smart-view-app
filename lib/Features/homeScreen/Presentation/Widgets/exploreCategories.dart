@@ -1,12 +1,12 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-import 'package:smartviewapp/Features/homeScreen/Presentation/Widgets/exploreProductsGridView.dart';
 
 import '../../../../Core/fontOpt.dart';
+import 'exploreCategoriesListView.dart';
 
-class ExploreProducts extends StatelessWidget {
-  const ExploreProducts({super.key});
+class ExploreCategories extends StatelessWidget {
+  const ExploreCategories({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,11 +14,11 @@ class ExploreProducts extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "Explore Products",
+          "Explore Categories",
           style: FontOpt.regularText,
         ),
         const SizedBox(height: 10),
-        const ExploreProductsGridView(),
+        const ExploreCategoriesListView(),
       ],
     );
   }

@@ -11,4 +11,14 @@ class FontOpt {
   static TextStyle regularText = const TextStyle(
     fontSize: 17,
   );
+
+  static TextStyle regularBold = const TextStyle(
+    fontSize: 17,
+    fontWeight: FontWeight.w600,
+  );
+
+  static TextStyle regularSemiBold = const TextStyle(
+    fontSize: 15,
+    fontWeight: FontWeight.w400,
+  );
 }

@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../Core/colors.dart';
 import '../../../../constants.dart';
 
-class ExploreProductCard extends StatelessWidget {
-  const ExploreProductCard({super.key});
+class ExploreCategoriesCard extends StatelessWidget {
+  const ExploreCategoriesCard({super.key});
 
   @override
   Widget build(BuildContext context) {
