@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:smartviewapp/Core/bottomNav.dart';
 
 import '../../../../constants.dart';
-import 'exploreCategories.dart';
-import 'exploreProducts.dart';
+import 'favoriteScreenWidget.dart';
 import 'homeAppBar.dart';
+import 'homeScreenWidget.dart';
 
 class HomeScreenBody extends StatefulWidget {
   const HomeScreenBody({super.key});
@@ -49,37 +49,6 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
           ),
         ),
       ),
-    );
-  }
-}
-
-class FavoriteScreenWidget extends StatelessWidget {
-  const FavoriteScreenWidget({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text("Favorite Phones List"),
-    );
-  }
-}
-
-class HomeScreenWidget extends StatelessWidget {
-  const HomeScreenWidget({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: const [
-        ExploreCategories(),
-        SizedBox(height: 30),
-        ExploreProducts(),
-      ],
     );
   }
 }

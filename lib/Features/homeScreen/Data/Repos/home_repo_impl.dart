@@ -1,9 +1,10 @@
 import 'package:dio/dio.dart';
 import 'package:smartviewapp/Core/apiService.dart';
-import 'package:smartviewapp/Features/homeScreen/Data/Models/phone_model/phone_model.dart';
 import 'package:smartviewapp/Core/errors/failure.dart';
 import 'package:dartz/dartz.dart';
 import 'package:smartviewapp/Features/homeScreen/Data/Repos/home_repo.dart';
+
+import '../Models/phone_model/phone_model/phone_model.dart';
 
 class HomeRepoImpl implements HomeRepo {
   final ApiService apiService;
@@ -18,13 +19,12 @@ class HomeRepoImpl implements HomeRepo {
       for (var item in data["data"]) {
         phoneList.add(PhoneModel.fromJson(item));
       }
-
       return right(phoneList);
     } catch (e) {
       if (e is DioError) {
         return left(ServerFailure(e.message!));
       } else {
-        return left(ServerFailure("Error Occured"));
+        return left(ServerFailure(e.toString()));
       }
     }
   }
