@@ -61,7 +61,7 @@ class FavoriteScreenWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Center(
-      child: Text("Favorite Phones"),
+      child: Text("Favorite Phones List"),
     );
   }
 }
