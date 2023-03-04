@@ -1,10 +1,7 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:smartviewapp/Core/bottomNav.dart';
-import 'package:smartviewapp/Core/colors.dart';
 
 import '../../../../constants.dart';
 import 'exploreCategories.dart';
@@ -63,10 +60,8 @@ class FavoriteScreenWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: const [
-        Text("hw arrqdf"),
-      ],
+    return const Center(
+      child: Text("Favorite Phones"),
     );
   }
 }

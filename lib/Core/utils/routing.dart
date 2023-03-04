@@ -22,7 +22,7 @@ class Routing {
       GoRoute(
         path: phoneScreen,
         builder: (context, state) => const PhoneSpecsScreen(),
-      )
+      ),
     ],
   );
 }
