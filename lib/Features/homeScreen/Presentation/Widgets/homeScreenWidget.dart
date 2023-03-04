@@ -14,25 +14,13 @@ class HomeScreenWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<PhoneCubit, PhoneState>(
-      builder: (context, state) {
-        if (state is PhoneSuccess) {
-          return Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
-              ExploreCategories(),
-              SizedBox(height: 30),
-              ExploreProducts(),
-            ],
-          );
-        } else if (state is PhoneFailure) {
-          return Center(child: Text(state.errorMsg));
-        } else {
-          return const Center(
-            child: CircularProgressIndicator(),
-          );
-        }
-      },
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: const [
+        ExploreCategories(),
+        SizedBox(height: 30),
+        ExploreProducts(),
+      ],
     );
   }
 }

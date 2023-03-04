@@ -6,7 +6,10 @@ import '../../../../Core/colors.dart';
 import '../../../../Core/fontOpt.dart';
 
 class PhonePrice extends StatelessWidget {
-  const PhonePrice({super.key});
+  const PhonePrice({super.key, required this.price, required this.oldPrice});
+
+  final String price;
+  final String oldPrice;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +22,7 @@ class PhonePrice extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text("Price", style: FontOpt.regularBoldWhite),
-              Text("499.99 \$", style: FontOpt.regularBoldWhite),
+              Text("$price €", style: FontOpt.regularBoldWhite),
             ],
           ),
           Row(
@@ -30,7 +33,7 @@ class PhonePrice extends StatelessWidget {
                 style: FontOpt.specTitle.copyWith(color: AppColors.cardColor),
               ),
               Text(
-                "549.99 \$",
+                "$oldPrice €",
                 style: FontOpt.regularBoldWhite.copyWith(
                   decoration: TextDecoration.lineThrough,
                   color: AppColors.cardColor,

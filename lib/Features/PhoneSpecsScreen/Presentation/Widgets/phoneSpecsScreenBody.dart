@@ -2,13 +2,17 @@
 
 import 'package:flutter/material.dart';
 import 'package:smartviewapp/Features/PhoneSpecsScreen/Presentation/Widgets/phoneSpecsGroup.dart';
+import 'package:smartviewapp/Features/homeScreen/Data/Models/phone_model/phone_model/phone_model.dart';
+import 'package:smartviewapp/constants.dart';
 
 import 'phoneAppBar.dart';
 import 'phonePicture.dart';
 import 'phonePrice.dart';
 
 class PhoneSpecsScreenBody extends StatelessWidget {
-  const PhoneSpecsScreenBody({super.key});
+  const PhoneSpecsScreenBody({super.key, required this.phoneModel});
+
+  final PhoneModel phoneModel;
 
   @override
   Widget build(BuildContext context) {
@@ -17,12 +21,15 @@ class PhoneSpecsScreenBody extends StatelessWidget {
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
           child: Column(
-            children: const [
-              PhoneAppBar(),
-              PhonePic(),
-              SizedBox(height: 30),
-              PhonePrice(),
-              PhoneSpecsGroup(),
+            children: [
+              const PhoneAppBar(),
+              PhonePic(imageUrl: phoneModel.images?[0].url ?? unavailable),
+              const SizedBox(height: 30),
+              PhonePrice(
+                price: "${phoneModel.prices![0].price ?? 'Unvailable'}",
+                oldPrice: "${phoneModel.prices![0].oldPrice ?? 'Unvailable'}",
+              ),
+              const PhoneSpecsGroup(),
             ],
           ),
         ),

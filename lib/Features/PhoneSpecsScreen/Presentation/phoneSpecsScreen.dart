@@ -2,12 +2,15 @@
 
 import 'package:flutter/material.dart';
 import 'package:smartviewapp/Features/PhoneSpecsScreen/Presentation/Widgets/phoneSpecsScreenBody.dart';
+import 'package:smartviewapp/Features/homeScreen/Data/Models/phone_model/phone_model/phone_model.dart';
 
 class PhoneSpecsScreen extends StatelessWidget {
-  const PhoneSpecsScreen({super.key});
+  const PhoneSpecsScreen({super.key, required this.phoneModel});
+
+  final PhoneModel phoneModel;
 
   @override
   Widget build(BuildContext context) {
-    return const PhoneSpecsScreenBody();
+    return PhoneSpecsScreenBody(phoneModel: phoneModel);
   }
 }
