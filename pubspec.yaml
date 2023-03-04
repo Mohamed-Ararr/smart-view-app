@@ -41,6 +41,8 @@ dependencies:
   equatable: ^2.0.5
   dartz: ^0.10.1
   dio: ^5.0.1
+  bloc_flutter: ^0.1.0
+  bloc: ^8.1.1
 
 dev_dependencies:
   flutter_test:
