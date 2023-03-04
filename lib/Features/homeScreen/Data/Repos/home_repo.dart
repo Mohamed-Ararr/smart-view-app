@@ -4,5 +4,4 @@ import 'package:smartviewapp/Features/homeScreen/Data/Models/phone_model/phone_m
 
 abstract class HomeRepo {
   Future<Either<Failure, List<PhoneModel>>> fetchPhones();
-  Future<Either<Failure, List<PhoneModel>>> fetchCategories();
 }

@@ -21,13 +21,11 @@ class HomeRepoImpl implements HomeRepo {
 
       return right(phoneList);
     } catch (e) {
-      return left(ServerFailure());
+      if (e is DioError) {
+        return left(ServerFailure(e.message!));
+      } else {
+        return left(ServerFailure("Error Occured"));
+      }
     }
-  }
-
-  @override
-  Future<Either<Failure, List<PhoneModel>>> fetchCategories() {
-    // TODO: implement fetchPhones
-    throw UnimplementedError();
   }
 }
