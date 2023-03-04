@@ -13,11 +13,32 @@ class PhonePrice extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
       color: AppColors.secondColor,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      child: Column(
         children: [
-          Text("Price", style: FontOpt.regularBoldWhite),
-          Text("499.99 \$", style: FontOpt.regularBoldWhite),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text("Price", style: FontOpt.regularBoldWhite),
+              Text("499.99 \$", style: FontOpt.regularBoldWhite),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "Old Price",
+                style: FontOpt.specTitle.copyWith(color: AppColors.cardColor),
+              ),
+              Text(
+                "549.99 \$",
+                style: FontOpt.regularBoldWhite.copyWith(
+                  decoration: TextDecoration.lineThrough,
+                  color: AppColors.cardColor,
+                  fontWeight: FontWeight.normal,
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
