@@ -10,13 +10,16 @@ class PhonePic extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CachedNetworkImage(
-      imageUrl: imageUrl,
-      placeholder: (context, url) => const Center(
-        child: CircularProgressIndicator(),
+    return Container(
+      width: MediaQuery.of(context).size.width * 0.65,
+      child: CachedNetworkImage(
+        imageUrl: imageUrl,
+        placeholder: (context, url) => const Center(
+          child: CircularProgressIndicator(),
+        ),
+        errorWidget: (context, url, error) =>
+            const Center(child: Text("Failed to upload image")),
       ),
-      errorWidget: (context, url, error) =>
-          const Center(child: Text("Failed to upload image")),
     );
   }
 }

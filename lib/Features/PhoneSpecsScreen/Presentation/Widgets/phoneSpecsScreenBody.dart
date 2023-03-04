@@ -23,6 +23,7 @@ class PhoneSpecsScreenBody extends StatelessWidget {
           child: Column(
             children: [
               const PhoneAppBar(),
+              const SizedBox(height: 30),
               PhonePic(imageUrl: phoneModel.images?[0].url ?? unavailable),
               const SizedBox(height: 30),
               PhonePrice(
