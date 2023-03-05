@@ -23,13 +23,6 @@ class PhoneAppBar extends StatelessWidget {
               size: 30,
             ),
           ),
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              FontAwesomeIcons.heart,
-              size: 30,
-            ),
-          ),
         ],
       ),
     );
