@@ -1,10 +1,9 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:smartviewapp/Features/homeScreen/Presentation/Widgets/searchButton.dart';
 
-import '../../../../Core/colors.dart';
 import '../../../../Core/fontOpt.dart';
-import '../../../../constants.dart';
 
 class HomeAppBar extends StatelessWidget {
   const HomeAppBar({super.key});

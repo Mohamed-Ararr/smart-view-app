@@ -8,7 +8,6 @@ import 'package:smartviewapp/Features/homeScreen/Data/Models/phone_model/phone_m
 import 'package:smartviewapp/Features/homeScreen/Presentation/homeScreen.dart';
 
 import '../../Features/SplashScreen/Presentation/splashScreen.dart';
-import '../../Features/homeScreen/Data/Repos/home_repo.dart';
 import '../../Features/homeScreen/Data/Repos/home_repo_impl.dart';
 
 class Routing {

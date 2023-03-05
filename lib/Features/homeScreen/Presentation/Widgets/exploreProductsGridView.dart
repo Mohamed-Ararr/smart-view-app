@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:smartviewapp/Features/homeScreen/Bloc%20Manager/Phone%20Cubit/cubit/phone_cubit.dart';
 import 'package:smartviewapp/Features/homeScreen/Presentation/Widgets/failureWidget.dart';
-import 'package:smartviewapp/constants.dart';
 
 import 'exploreProductCard.dart';
 
