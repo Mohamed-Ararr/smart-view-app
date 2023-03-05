@@ -30,7 +30,7 @@ class FontOpt {
   static TextStyle regularBoldWhite = const TextStyle(
     fontSize: 17,
     fontWeight: FontWeight.w600,
-    color: Colors.black,
+    color: Colors.white,
   );
 
   static TextStyle specTitle = TextStyle(

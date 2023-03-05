@@ -1,8 +1,17 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
+import 'package:smartviewapp/Core/fontOpt.dart';
+import 'package:smartviewapp/Features/homeScreen/Bloc%20Manager/Phone%20Cubit/cubit/phone_cubit.dart';
+import 'package:smartviewapp/Features/homeScreen/Data/Models/phone_model/phone_model/phone_model.dart';
+import 'package:smartviewapp/Features/homeScreen/Presentation/Widgets/exploreProductsGridView.dart';
+import 'package:smartviewapp/Features/homeScreen/Presentation/Widgets/failureWidget.dart';
+import 'package:smartviewapp/constants.dart';
+
+import '../Features/homeScreen/Presentation/Widgets/exploreProductCard.dart';
 
 class SearchDel extends SearchDelegate {
   @override
@@ -32,11 +41,59 @@ class SearchDel extends SearchDelegate {
 
   @override
   Widget buildResults(BuildContext context) {
-    return const Text("hello");
+    return buildSuggestions(context);
   }
 
   @override
   Widget buildSuggestions(BuildContext context) {
-    return const Text("hello");
+    return BlocBuilder<PhoneCubit, PhoneState>(
+      builder: (context, state) {
+        if (state is PhoneSuccess) {
+          List<PhoneModel> phonesList = state.phoneList.where((phone) {
+            String input = query.toLowerCase();
+            String result = phone.name!.toLowerCase();
+            return result.contains(input);
+          }).toList();
+          return SingleChildScrollView(
+            physics: const BouncingScrollPhysics(),
+            child: Column(
+              children: [
+                const SizedBox(height: 20),
+                Text(
+                  "Suggestions",
+                  style: FontOpt.regularBoldWhite,
+                ),
+                const SizedBox(height: 20),
+                Container(
+                  padding: kPaddingRL,
+                  // padding: kPaddingRL,
+                  child: GridView.builder(
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                      childAspectRatio: 3 / 4,
+                      crossAxisCount: 2,
+                      crossAxisSpacing: 15,
+                      mainAxisSpacing: 15,
+                    ),
+                    itemCount: phonesList.length,
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemBuilder: (context, index) {
+                      return ExploreProductsCard(
+                        phoneModel: phonesList[index],
+                      );
+                    },
+                  ),
+                ),
+              ],
+            ),
+          );
+        } else if (state is PhoneFailure) {
+          return FailureWidget(errorMsg: state.errorMsg);
+        } else {
+          return const Center(child: CircularProgressIndicator());
+        }
+      },
+    );
   }
 }
