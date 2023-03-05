@@ -12,6 +12,7 @@ class SpecColumnOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         PhoneSpec(
@@ -31,7 +32,8 @@ class SpecColumnOne extends StatelessWidget {
         const SizedBox(height: 20),
         PhoneSpec(
           specTtile: "Storage",
-          specValue: "${phoneModel.main?.storageCapacityGb ?? "Not Available"}",
+          specValue:
+              "${phoneModel.main?.storageCapacityGb ?? "Not Available"} GB",
         ),
       ],
     );

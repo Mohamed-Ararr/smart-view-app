@@ -24,6 +24,7 @@ class PhoneSpecsGroup extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 15),
           color: AppColors.cardColor,
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               PhoneName(phoneName: phoneModel.name!),
@@ -31,11 +32,11 @@ class PhoneSpecsGroup extends StatelessWidget {
               const SpecificationText(),
               const SizedBox(height: 20),
               Row(
-                children: const [
-                  SpecColumnOne(),
-                  Spacer(flex: 2),
-                  SpecColumnTwo(),
-                  Spacer(),
+                children: [
+                  SpecColumnOne(phoneModel: phoneModel),
+                  const Spacer(flex: 2),
+                  SpecColumnTwo(phoneModel: phoneModel),
+                  const Spacer(),
                 ],
               ),
             ],
