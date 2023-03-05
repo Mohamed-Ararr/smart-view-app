@@ -12,8 +12,9 @@ class FailureWidget extends StatelessWidget {
     return Center(
       child: Column(
         children: [
+          const SizedBox(height: 30),
           const Text("¯\\_(ツ)_/¯"),
-          const SizedBox(height: 50),
+          const SizedBox(height: 30),
           Text(errorMsg),
         ],
       ),

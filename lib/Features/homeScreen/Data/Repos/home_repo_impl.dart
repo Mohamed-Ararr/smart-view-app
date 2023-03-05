@@ -22,7 +22,7 @@ class HomeRepoImpl implements HomeRepo {
       return right(phoneList);
     } catch (e) {
       if (e is DioError) {
-        return left(ServerFailure(e.message!));
+        return left(ServerFailure(e.message ?? "Error Occured"));
       } else {
         return left(ServerFailure(e.toString()));
       }

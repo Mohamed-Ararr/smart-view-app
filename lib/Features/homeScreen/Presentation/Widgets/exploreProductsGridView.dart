@@ -27,7 +27,6 @@ class ExploreProductsGridView extends StatelessWidget {
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
             itemBuilder: (context, index) {
-              var phones = state.phoneList[index];
               return ExploreProductsCard(
                 phoneModel: state.phoneList[index],
               );

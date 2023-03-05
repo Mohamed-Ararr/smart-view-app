@@ -13,11 +13,19 @@ class ExploreCategoriesListView extends StatelessWidget {
       child: ListView.builder(
         physics: const BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
-        itemCount: 5,
+        itemCount: phoneCategories.length,
         itemBuilder: (context, index) {
-          return const ExploreCategoriesCard();
+          return ExploreCategoriesCard(phoneCateg: phoneCategories[index]);
         },
       ),
     );
   }
 }
+
+List<String> phoneCategories = [
+  "Apple",
+  "Samsung",
+  "Xiomi",
+  "Oppo",
+  "Huawei",
+];
