@@ -6,6 +6,7 @@ class Main extends Equatable {
   final double? displaySizeInch;
   final int? storageCapacityGb;
   final String? designColorName;
+  final String? cpuType;
 
   const Main({
     this.generalYear,
@@ -13,6 +14,7 @@ class Main extends Equatable {
     this.displaySizeInch,
     this.storageCapacityGb,
     this.designColorName,
+    this.cpuType,
   });
 
   factory Main.fromJson(Map<String, dynamic> json) => Main(
@@ -21,6 +23,7 @@ class Main extends Equatable {
         displaySizeInch: (json['display_size__inch'] as num?)?.toDouble(),
         storageCapacityGb: json['storage_capacity__gb'] as int?,
         designColorName: json['design_color_name'] as String?,
+        cpuType: json['cpu_type'] as String?,
       );
 
   Map<String, dynamic> toJson() => {
@@ -29,6 +32,7 @@ class Main extends Equatable {
         'display_size__inch': displaySizeInch,
         'storage_capacity__gb': storageCapacityGb,
         'design_color_name': designColorName,
+        'cpu_type': cpuType,
       };
 
   @override
@@ -39,6 +43,7 @@ class Main extends Equatable {
       displaySizeInch,
       storageCapacityGb,
       designColorName,
+      cpuType,
     ];
   }
 }

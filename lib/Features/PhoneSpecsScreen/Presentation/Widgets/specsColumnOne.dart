@@ -2,33 +2,36 @@
 
 import 'package:flutter/material.dart';
 import 'package:smartviewapp/Features/PhoneSpecsScreen/Presentation/Widgets/phoneSpec.dart';
+import 'package:smartviewapp/Features/homeScreen/Data/Models/phone_model/phone_model/phone_model.dart';
 
 class SpecColumnOne extends StatelessWidget {
-  const SpecColumnOne({super.key});
+  const SpecColumnOne({super.key, required this.phoneModel});
+
+  final PhoneModel phoneModel;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: const [
+      children: [
         PhoneSpec(
           specTtile: "Year",
-          specValue: "2021",
+          specValue: "${phoneModel.main?.generalYear ?? "Not Available"}",
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         PhoneSpec(
           specTtile: "Phone Code",
-          specValue: "Iph125code",
+          specValue: phoneModel.mpn ?? "Not Available",
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         PhoneSpec(
           specTtile: "Display Size",
-          specValue: "5.5-Inch",
+          specValue: "${phoneModel.main?.displaySizeInch ?? "Not Available"}",
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         PhoneSpec(
           specTtile: "Storage",
-          specValue: "128 GB",
+          specValue: "${phoneModel.main?.storageCapacityGb ?? "Not Available"}",
         ),
       ],
     );
