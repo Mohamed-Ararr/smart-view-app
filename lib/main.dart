@@ -25,6 +25,7 @@ class SmartViewApp extends StatelessWidget {
         ),
       )..fetchPhones(),
       child: MaterialApp.router(
+        debugShowCheckedModeBanner: false,
         routerConfig: Routing.routes,
         theme: ThemeData(
           fontFamily: "Montserrat",
