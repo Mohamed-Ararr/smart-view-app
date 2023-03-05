@@ -4,15 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
-import 'package:smartviewapp/Core/fontOpt.dart';
 import 'package:smartviewapp/Core/utils/buildSuggestions.dart';
 import 'package:smartviewapp/Features/homeScreen/Bloc%20Manager/Phone%20Cubit/cubit/phone_cubit.dart';
 import 'package:smartviewapp/Features/homeScreen/Data/Models/phone_model/phone_model/phone_model.dart';
-import 'package:smartviewapp/Features/homeScreen/Presentation/Widgets/exploreProductsGridView.dart';
 import 'package:smartviewapp/Features/homeScreen/Presentation/Widgets/failureWidget.dart';
-import 'package:smartviewapp/constants.dart';
-
-import '../Features/homeScreen/Presentation/Widgets/exploreProductCard.dart';
 
 class SearchDel extends SearchDelegate {
   @override
