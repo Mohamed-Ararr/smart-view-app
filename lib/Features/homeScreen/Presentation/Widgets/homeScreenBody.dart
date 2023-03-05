@@ -1,12 +1,10 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-import 'package:smartviewapp/Core/bottomNav.dart';
 
 import '../../../../constants.dart';
-import 'favoriteScreenWidget.dart';
+import 'exploreProducts.dart';
 import 'homeAppBar.dart';
-import 'homeScreenWidget.dart';
 
 class HomeScreenBody extends StatefulWidget {
   const HomeScreenBody({super.key});
@@ -16,23 +14,9 @@ class HomeScreenBody extends StatefulWidget {
 }
 
 class _HomeScreenBodyState extends State<HomeScreenBody> {
-  List<Widget> screens = const [
-    HomeScreenWidget(),
-    FavoriteScreenWidget(),
-  ];
-
-  int selectedScreen = 0;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNav(
-        onTapChange: (index) {
-          setState(() {
-            selectedScreen = index;
-          });
-        },
-      ),
       body: SafeArea(
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
@@ -40,10 +24,10 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
             padding: kPaddingRL,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const HomeAppBar(),
-                const SizedBox(height: 20),
-                screens.elementAt(selectedScreen),
+              children: const [
+                HomeAppBar(),
+                SizedBox(height: 20),
+                ExploreProducts(),
               ],
             ),
           ),
