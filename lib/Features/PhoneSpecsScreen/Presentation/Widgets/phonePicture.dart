@@ -12,6 +12,7 @@ class PhonePic extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: MediaQuery.of(context).size.width * 0.65,
+      height: MediaQuery.of(context).size.height * 0.35,
       child: CachedNetworkImage(
         imageUrl: imageUrl,
         placeholder: (context, url) => const Center(

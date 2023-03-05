@@ -27,6 +27,12 @@ class FontOpt {
     color: Colors.black,
   );
 
+  static TextStyle regularBoldBlack = const TextStyle(
+    fontSize: 17,
+    fontWeight: FontWeight.w600,
+    color: Colors.black,
+  );
+
   static TextStyle regularBoldWhite = const TextStyle(
     fontSize: 17,
     fontWeight: FontWeight.w600,

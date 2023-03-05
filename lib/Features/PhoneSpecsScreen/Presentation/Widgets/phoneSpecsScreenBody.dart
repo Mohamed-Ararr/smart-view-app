@@ -30,7 +30,7 @@ class PhoneSpecsScreenBody extends StatelessWidget {
                 price: "${phoneModel.prices![0].price ?? 'Unvailable'}",
                 oldPrice: "${phoneModel.prices![0].oldPrice ?? 'Unvailable'}",
               ),
-              const PhoneSpecsGroup(),
+              PhoneSpecsGroup(phoneModel: phoneModel),
             ],
           ),
         ),

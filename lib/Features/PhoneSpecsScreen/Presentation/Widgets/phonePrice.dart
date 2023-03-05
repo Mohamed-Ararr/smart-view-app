@@ -21,8 +21,8 @@ class PhonePrice extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("Price", style: FontOpt.regularBoldWhite),
-              Text("$price €", style: FontOpt.regularBoldWhite),
+              Text("Price", style: FontOpt.regularBoldBlack),
+              Text("$price €", style: FontOpt.regularBoldBlack),
             ],
           ),
           Row(
